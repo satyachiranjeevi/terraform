@@ -1,9 +1,17 @@
 variable "ami_id" {
-    type = string # this is the data type
-    default = "ami-03265a0778a880afb" # this is the default value
+    type = string
+    default = "ami-03265a0778a880afb"
 }
 
 variable "instance_type" {
-    type = string # this is the data type
-    default = "t2.micro" # this is the default value
+    default = "t2.micro"
+}
+
+variable "sg_name" {
+    default = "allowing_all"
+}
+
+variable "sg_cidr" {
+    type = list
+    default = ["0.0.0.0/0"]
 }
